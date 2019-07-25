@@ -22,7 +22,7 @@ open class FloatyItem: UIView {
   /**
    This object's button size.
    */
-  @objc open var size: CGFloat = 42 {
+  @objc open var size: CGFloat = 70 {
     didSet {
       self.frame = CGRect(x: 0, y: 0, width: size, height: size)
       titleLabel.frame.origin.y = self.frame.height/2-titleLabel.frame.size.height/2
