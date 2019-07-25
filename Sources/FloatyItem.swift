@@ -22,7 +22,7 @@ open class FloatyItem: UIView {
   /**
    This object's button size.
    */
-  @objc open var size: CGFloat = 70 {
+  @objc open var size: CGFloat = 42 {
     didSet {
       self.frame = CGRect(x: 0, y: 0, width: size, height: size)
       titleLabel.frame.origin.y = self.frame.height/2-titleLabel.frame.size.height/2
@@ -231,7 +231,7 @@ open class FloatyItem: UIView {
     //        tintLayer.frame = CGRectMake(frame.size.width - size, 0, size, size)
     let castParent : Floaty = superview as! Floaty
     tintLayer.frame = CGRect(x: castParent.itemSize/2 - (size/2), y: 0, width: size, height: size)
-    tintLayer.backgroundColor = UIColor.white.withAlphaComponent(0.2).cgColor
+    tintLayer.backgroundColor = UIColor.blue.withAlphaComponent(0.2).cgColor
     tintLayer.cornerRadius = size/2
     layer.addSublayer(tintLayer)
   }
