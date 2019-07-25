@@ -221,18 +221,18 @@ open class FloatyItem: UIView {
   fileprivate func createCircleLayer() {
     //        circleLayer.frame = CGRectMake(frame.size.width - size, 0, size, size)
     let castParent : Floaty = superview as! Floaty
-    circleLayer.frame = CGRect(x: castParent.itemSize/2 - (size/2), y: 0, width: size, height: size)
+    circleLayer.frame = CGRect(x: (castParent.itemSize * 0.7) - (size * 0.7), y: 0, width: size, height: size)
     circleLayer.backgroundColor = buttonColor.cgColor
-    circleLayer.cornerRadius = size/2
+    circleLayer.cornerRadius = size * 0.7
     layer.addSublayer(circleLayer)
   }
   
   fileprivate func createTintLayer() {
     //        tintLayer.frame = CGRectMake(frame.size.width - size, 0, size, size)
     let castParent : Floaty = superview as! Floaty
-    tintLayer.frame = CGRect(x: castParent.itemSize/2 - (size/2), y: 0, width: size, height: size)
+    tintLayer.frame = CGRect(x: (castParent.itemSize * 0.7) - (size * 0.7), y: 0, width: size, height: size)
     tintLayer.backgroundColor = UIColor.blue.withAlphaComponent(0.2).cgColor
-    tintLayer.cornerRadius = size/2
+    tintLayer.cornerRadius = size * 0.7
     layer.addSublayer(tintLayer)
   }
   
