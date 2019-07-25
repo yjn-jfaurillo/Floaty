@@ -37,7 +37,7 @@ open class Floaty: UIView {
   /**
    This object's button size.
    */
-  @objc open var size: CGFloat = 56 {
+  @objc open var size: CGFloat = 80 {
     didSet {
       self.setNeedsDisplay()
       self.recalculateItemsOrigin()
