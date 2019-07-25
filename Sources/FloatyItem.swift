@@ -25,8 +25,8 @@ open class FloatyItem: UIView {
   @objc open var size: CGFloat = 42 {
     didSet {
       self.frame = CGRect(x: 0, y: 0, width: size, height: size)
-      titleLabel.frame.origin.y = self.frame.height/2 - titleLabel.frame.size.height/2
-      _iconImageView?.center = CGPoint(x: size * 0.8, y: size * 0.8) + imageOffset
+      titleLabel.frame.origin.y = self.frame.height/2-titleLabel.frame.size.height/2
+      _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
       self.setNeedsDisplay()
     }
   }
@@ -221,7 +221,7 @@ open class FloatyItem: UIView {
   fileprivate func createCircleLayer() {
     //        circleLayer.frame = CGRectMake(frame.size.width - size, 0, size, size)
     let castParent : Floaty = superview as! Floaty
-    circleLayer.frame = CGRect(x: (castParent.itemSize * 0.8) - (size * 0.8), y: 0, width: size, height: size)
+    circleLayer.frame = CGRect(x: (castParent.itemSize * 0.9) - (size * 0.9), y: 0, width: size, height: size)
     circleLayer.backgroundColor = buttonColor.cgColor
     circleLayer.cornerRadius = size * 0.5
     layer.addSublayer(circleLayer)
@@ -230,7 +230,7 @@ open class FloatyItem: UIView {
   fileprivate func createTintLayer() {
     //        tintLayer.frame = CGRectMake(frame.size.width - size, 0, size, size)
     let castParent : Floaty = superview as! Floaty
-    tintLayer.frame = CGRect(x: (castParent.itemSize * 0.8) - (size * 0.8), y: 0, width: size, height: size)
+    tintLayer.frame = CGRect(x: (castParent.itemSize * 0.9) - (size * 0.9), y: 0, width: size, height: size)
     tintLayer.backgroundColor = UIColor.blue.withAlphaComponent(0.2).cgColor
     tintLayer.cornerRadius = size * 0.5
     layer.addSublayer(tintLayer)
